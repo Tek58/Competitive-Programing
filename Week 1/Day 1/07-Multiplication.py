@@ -1,18 +1,20 @@
-def summation(x,y):
+x = input("Enter your first num: ")
+y = input("Enter your second num: ")
+
+def summation(x, y):
     carry = 0
     lis = []
 
-    if x[0] == "-" and y[0] == "-":
-        result = summation(x, y)
-        print("-" + str(result))
+    x = x.strip("-")
+    y = y.strip("-")
 
     for i in range(len(x) - len(y)):
-           y = "0" + y
-           
+        y = "0" + y
+
     for i in range(len(y) - len(x)):
-           x = "0" + x
-           
-    for i in range(1,len(x)+1):
+        x = "0" + x
+
+    for i in range(1, len(x) + 1):
         ans = int(x[-i]) + int(y[-i]) + carry
         if ans >= 10:
             ans = str(ans)
@@ -26,14 +28,13 @@ def summation(x,y):
         carry = 0
 
     lis = lis[::-1]
-    #return "".join(lis)
+    # return "".join(lis)
     result = ""
     for i in lis:
         result += str(i)
     return int(result)
-    
-def multiplication(x, y):
 
+def multiplication(x, y):
     carry = 0
     if x[0] == "-" and y[0] == "-":
         x = x.strip("-")
@@ -45,7 +46,6 @@ def multiplication(x, y):
         y = "0" + y
 
     lis = [[] for i in range(len(y))]
-
 
     for i in range(1, len(x) + 1):
         if i >= 2:
@@ -88,52 +88,13 @@ def multiplication(x, y):
     return summ
 
 
-# if x[0] == "-" or y[0] == "-":
-#     x = x.strip("-")
-#     y = y.strip("-")
-#     result = multiplication(x,y)
-#     print("-"  + str(result))
-#
-# else:
-#     multiplication(x,y)
-
-
-print(summation("12","6"))
-print(multiplication("54644455545478787512158484784523121454487845454","645") == 54644455545478787512158484784523121454487845454 * 645)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if x[0] == "-" and y[0] == "-":
+    print(int(multiplication(x, y)))
+elif x[0] == "-" or y[0] == "-":
+    x = x.strip("-")
+    y = y.strip("-")
+    result = multiplication(x, y)
+    print(int("-" + str(result)))
+else:
+    print(int(multiplication(x, y)))
     
