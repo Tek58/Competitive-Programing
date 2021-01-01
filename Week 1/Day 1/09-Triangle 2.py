@@ -5,3 +5,4 @@ def triangle2(num):
         print("*"*(2*i - 1), end="")
         print()
 triangle2(num)
+
