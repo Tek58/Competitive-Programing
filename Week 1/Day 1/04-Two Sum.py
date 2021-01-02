@@ -6,5 +6,4 @@ def twoSum(nums, target):
                 value.append(i)
                 value.append(j)
     return list(set(value))
-print(twoSum([3,2,4], 6))  
-
+print(twoSum([3,2,4], 6))
