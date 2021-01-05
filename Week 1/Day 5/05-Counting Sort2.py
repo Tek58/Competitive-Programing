@@ -17,6 +17,5 @@ def countingSort(arr):
     result = []
     for i in range(len(placeHolder)):
         if placeHolder[i] != 0:
-            for j in range(placeHolder[i]):
-                result.append(i)
+            result += [i]*placeHolder[i]
     return result

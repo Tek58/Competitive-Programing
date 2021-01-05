@@ -15,8 +15,7 @@ def countingSort(lis):
     result = []
     for i in range(len(placeHolder)):
         if placeHolder[i] != 0:
-            for j in range(placeHolder[i]):
-                result.append(i)
+            result += [i]*placeHolder[i]
     return result
 
 print(countingSort([5,17,55,4,8,3,0,1]))
