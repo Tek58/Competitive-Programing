@@ -49,7 +49,7 @@ def multiplication(x, y):
 
     for i in range(1, len(x) + 1):
         if i >= 2:
-            for z in range(i - 1):
+            for j in range(i - 1):
                 disp = 0
                 lis[i - 1].append(disp)
         for j in range(1, len(y) + 1):
