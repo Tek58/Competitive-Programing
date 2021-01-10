@@ -2,7 +2,7 @@
 Question -> https://leetcode.com/problems/valid-parentheses/
 @Author : Taklemariam Alazar
 '''
-def isValid(self, s: str) -> bool:
+def isValid(s):
     if len(s) % 2 != 0:
         return False
     count = 0
