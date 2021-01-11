@@ -3,16 +3,18 @@ Question -> https://leetcode.com/problems/valid-parentheses/
 @Author : Taklemariam Alazar
 '''
 def isValid(s):
-    if len(s) % 2 != 0:
-        return False
-    count = 0
+    if len(s) % 2 != 0 or ( s[0] in ")]}") or (s[-1] in "([{") :
+            return False
+    stack = []
     for i in range(len(s)):
-        for j in range(i,len(s)):
-            if ((s[i] == "(" and s[j] == ")") or (s[i] == "[" and s[j] == "]") or (s[i] == "{" and s[j] == "}")) and ((i == j-1) or (i == ((len(s) -1) - j))):
-                s = s.replace("s[j]", " ")
-                count += 1
-    if count == len(s)//2:
+        if s[i] in "([{":
+            stack.append(s[i])
+        else:
+            if len(stack) != 0 and  (stack[-1] + s[i] == "()" or  stack[-1] + s[i] == "[]" or stack[-1] + s[i] == "{}"):
+                stack.pop()
+            else:
+                return False
+    if len(stack) == 0:
         return True
-    else:
-        return False
-print(isValid("[[[]"))
+    return False
+        
