@@ -26,7 +26,6 @@ class MyQueue:
     def peek(self) -> int:
         return self.value[0]
         
-
     def empty(self) -> bool:
         if self.size == 0:
             return True
