@@ -43,14 +43,32 @@
 # print(reorganizeString("abaaczadrrcr"))
 
 def solution(A):
-    new_A = sorted(A)
-    new_A = new_A[::-1]
-    count = 0
-    print(A)
-    print(new_A)
-    for i in range(len(A)-1):
-        if A.index(new_A[i]) > A.index(new_A[i+1]):
+  if len(A) == 1:
+    return A[0]
+  A = sorted(A)
+  server1 = []
+  server2 = []
+  
+  server1.append(A.pop())
+  server2.append(A.pop())
+  
+  value1 = Sum(server1)
+  value2 = Sum(server2)
+    
+  for i in range(len(A)):
+    if value1 > value2 and len(A)!= 0:
+      server2.append(A.pop())
+      value2 = Sum(server2)
+    elif value1 <= value2 and len(A)!= 0:
+      server1.append(A.pop())
+      value1 = Sum(server1)
+  return abs(value1 - value2)
+
+def solution1(A):
+    Max = A[0]
+    count = 1
+    for i in range(len(A)):
+        if A[i] > Max:
+            Max = A[i]
             count += 1
-            print(count, A.index(new_A[i]), A.index(new_A[i+1]))
     return count
-print(solution([5,3,2,4,6,1,9,2,11,5]))

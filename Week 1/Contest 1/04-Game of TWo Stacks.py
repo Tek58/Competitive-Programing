@@ -1,4 +1,4 @@
-# Question -> https://leetcode.com/problems/add-two-numbers/
 '''
+Question -> Game of two Stacks
 @Author : Taklemariam Alazar
 '''
