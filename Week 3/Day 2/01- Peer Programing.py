@@ -1,0 +1,1 @@
+# print(heights[i], heights[i+1], " count ", count, " brac ", bricks, "ladder", ladders )

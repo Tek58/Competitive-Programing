@@ -11,3 +11,4 @@ def invertTree(self, root):
         self.invertTree(root.left)
         self.invertTree(root.right)
         return root
+
