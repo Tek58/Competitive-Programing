@@ -15,7 +15,7 @@ class Solution:
         self._helper(root, 0, result)
         return result[1]
     
-    def _helper(self, root, curr_depth, res):
+    def _helper(self, root: TreeNode, curr_depth, res):
         if root is None:
             return 
         if curr_depth > res[0]:
