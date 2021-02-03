@@ -20,7 +20,6 @@ def _helper(self,nums, left, right):
         if Max < nums[i]:
             Max = nums[i]
             index_max = i
-        
     root = TreeNode(Max)
     root.left = self._helper(nums,left, index_max-1)
     root.right = self._helper(nums,index_max + 1,right)

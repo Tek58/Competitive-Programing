@@ -30,3 +30,14 @@ def preorderTraversalItretive(self, root: TreeNode) :
                 stack.append(value.right)
                 stack.append(value.left)
         return result
+
+def postorderTraversalItretive(self, root: TreeNode) :
+        result = []
+        stack = []  
+        while len(stack) > 0:
+            value = stack.pop()
+            if value:
+                result.append(value.val)
+                stack.append(value.right)
+                stack.append(value.left)
+        return result
