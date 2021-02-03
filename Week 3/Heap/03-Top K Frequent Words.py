@@ -2,6 +2,7 @@
 Question -> https://leetcode.com/problems/top-k-frequent-words/
 @Author -> Taklemariam Alazar
 '''
+import heapq
 class Solution:
     def topKFrequent(self, words: List[str], k: int) -> List[str]:
         dic = {}
