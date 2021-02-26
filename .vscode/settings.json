@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python37\\python3.exe"
+    "python.pythonPath": "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python37\\python3.exe",
+    "python.linting.enabled": false
 }
